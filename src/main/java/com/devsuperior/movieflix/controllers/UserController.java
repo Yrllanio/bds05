@@ -23,10 +23,8 @@ public class UserController {
 	}
 
 	@GetMapping(value = "/profile")
-	public ResponseEntity<UserDTO> getProfile(@PathVariable Long id) {
-		//service.loadUserByUsername();
-		return ResponseEntity.noContent().build();
+	public ResponseEntity<UserDTO> getProfile(){
+		UserDTO dto = service.getProfile();
+		return ResponseEntity.ok(dto);
 	}
-	
-	
 }

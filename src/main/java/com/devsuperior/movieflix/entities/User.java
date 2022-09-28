@@ -23,7 +23,7 @@ public class User implements UserDetails, Serializable {
 	private String email;
 	private String password;
 
-	@OneToMany()
+	@OneToMany(mappedBy = "user")
 	private List<Review> reviews = new ArrayList<>();
 
 	@ManyToMany(fetch = FetchType.EAGER)
